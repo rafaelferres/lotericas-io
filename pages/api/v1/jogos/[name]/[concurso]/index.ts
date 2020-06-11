@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import dbConnect from "../../../../../utils/dbConnect";
-import Results from "../../../../../models/Results";
+import dbConnect from "../../../../../../utils/dbConnect";
+import Results from "../../../../../../models/Results";
 
 dbConnect();
 
