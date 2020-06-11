@@ -1,11 +1,11 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import dbConnect from "../../../../utils/dbConnect";
-import Results from "../../../../models/Results";
+import dbConnect from "../../../../../utils/dbConnect";
+import Results from "../../../../../models/Results";
 
 dbConnect();
 
-export default async function getGamesByName(req: NextApiRequest, res: NextApiResponse){
-    const { query : { name }, method } = req;
+export default async function getGameByConcurso(req: NextApiRequest, res: NextApiResponse){
+    const { query : { name, concurso }, method } = req;
 
     switch(method){
         case "GET":
@@ -17,11 +17,11 @@ export default async function getGamesByName(req: NextApiRequest, res: NextApiRe
                     updatedAt: false
                 };
 
-                const games = await Results.find({ name: name }, usersProjection);
-                if(games.length > 0){
+                const games = await Results.findOne({ name: name, concurso: concurso }, usersProjection);
+                if(games){
                     res.status(200).json({ success: true, data: games });
                 }else{
-                    res.status(400).json({ success: false, error: "Esse jogo não possui dados em nossa base de dados!" });
+                    res.status(400).json({ success: false, error: "Esse concurso não possui dados em nossa base de dados!" });
                 }
             }catch(err){
                 res.status(400).json({ success: false });
