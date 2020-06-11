@@ -31,9 +31,10 @@ module.exports = withTsconfigPaths(
   })
 );
 
-module.exports = {
+/*module.exports = {
   env: {
     MONGO_URI:
       "mongodb+srv://adm:b2fteqUrouYXdT9U@cluster0-6q8xt.gcp.mongodb.net/lotericas",
   },
 };
+*/
