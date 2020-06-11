@@ -1,9 +1,0 @@
-{
-  "version": 2,
-  "name": "lotericas-io",
-  "builds": [{ "src": "/server/index.js", "use": "@now/node-server" }],
-  "routes": [{ "src": "/{.*}", "dest": "/server/index.js" }],
-  "env": {
-    "HOST_MONGODB": "dqwdqwdqwd"
-  }
-}
