@@ -17,7 +17,7 @@ export default async function getGameByConcurso(req: NextApiRequest, res: NextAp
                     updatedAt: false
                 };
 
-                const games = await Results.findOne({ name: name, concurso: { $type : 1, $value: concurso } }, usersProjection);
+                const games = await Results.findOne({ name: name, concurso: concurso }, usersProjection);
                 if(games){
                     res.status(200).json({ success: true, data: games });
                 }else{
