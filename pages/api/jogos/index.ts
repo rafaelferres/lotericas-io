@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import dbConnect from "../../utils/dbConnect";
-import Modality from "../../models/Modality";
+import dbConnect from "../../../utils/dbConnect";
+import Modality from "../../../models/Modality";
 
 dbConnect();
 
