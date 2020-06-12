@@ -1,0 +1,12 @@
+.bg-blue-brasil {
+    background-color: #2a479f;
+}
+
+.navbar-brand {
+    font-weight: bolder;
+    font-size: 24px;
+}
+
+.bg-blue-brasil .nav-link {
+    color: #fff !important;
+}

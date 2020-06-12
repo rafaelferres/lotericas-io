@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/rafaelferres/lotericas-io#readme",
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
     "bootstrap": "^4.5.0",
     "mongoose": "^5.9.18",
     "next": "^9.4.4",
