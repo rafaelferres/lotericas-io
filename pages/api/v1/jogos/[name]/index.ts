@@ -5,8 +5,10 @@ import Results from "../../../../../models/Results";
 dbConnect();
 
 export default async function getGamesByName(req: NextApiRequest, res: NextApiResponse){
+    res.setHeader('Cache-Control', 'public, max-age=120, stale-while-revalidate=60');
+    
     const { query : { name }, method } = req;
-
+    
     switch(method){
         case "GET":
             try{

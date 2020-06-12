@@ -5,6 +5,8 @@ import Modality from "../../../../models/Modality";
 dbConnect();
 
 export default async function getAllGames(req: NextApiRequest, res: NextApiResponse){
+    res.setHeader('Cache-Control', 'public, max-age=120, stale-while-revalidate=60');
+
     const { method } = req;
 
     switch(method){
