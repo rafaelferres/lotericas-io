@@ -27,6 +27,9 @@ export default class HeaderStatic extends Component {
                         <Link scroll={false} href="#resultados-endpoint">
                             <a className="nav-item nav-link">Resultados</a>
                         </Link>
+                        <Link scroll={false} href="#resultado-ultimo-endpoint">
+                            <a className="nav-item nav-link">Último Resultado</a>
+                        </Link>
                         <Link scroll={false} href="#resultado-endpoint">
                             <a className="nav-item nav-link">Resultado</a>
                         </Link>

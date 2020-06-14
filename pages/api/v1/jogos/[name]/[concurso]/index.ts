@@ -18,12 +18,16 @@ export default async function getGameByConcurso(req: NextApiRequest, res: NextAp
                     createdAt: false,
                     updatedAt: false
                 };
-
-                const games = await Results.findOne({ name: name, concurso: concurso }, usersProjection);
-                if(games){
-                    res.status(200).json({ success: true, data: games });
+                if(concurso == "lasted"){
+                    const games = await Results.find({name: name}).sort({_id:-1}).limit(1);
+                    res.status(200).json({ success: true, data: games});
                 }else{
-                    res.status(400).json({ success: false, error: "Esse concurso não possui dados em nossa base de dados!" });
+                    const games = await Results.findOne({ name: name, concurso: concurso }, usersProjection);
+                    if(games){
+                        res.status(200).json({ success: true, data: games });
+                    }else{
+                        res.status(400).json({ success: false, error: "Esse concurso não possui dados em nossa base de dados!" });
+                    }
                 }
             }catch(err){
                 res.status(400).json({ success: false });

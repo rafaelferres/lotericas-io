@@ -99,10 +99,41 @@ const HomePage = () => (
                     </div>
 
                     <div style={{marginTop: "35px", textAlign: "center"}}>
+                        <h1 style={{color: "#2a479f"}} id="resultado-ultimo-endpoint">Último Resultado endpoint</h1>
+                        <div style={{fontSize: "20px"}}>
+                            <span>
+                                Nosso endpoint para último resultado possui dois parametro que é o nome do jogo e o número da rodada:
+                            </span>
+                            <div className="row" style={{marginTop: "15px", textAlign: "left"}}>
+                                <div className="col-6">
+                                    <div className="card">
+                                        <div className="card-header">
+                                            Configuração
+                                        </div>
+                                        <div className="card-body">
+                                        GET - https://lotericas.io/api/v1/jogos/:nome/lasted
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-6">
+                                    <div className="card">
+                                        <div className="card-header">
+                                            Exemplo
+                                        </div>
+                                        <div className="card-body">
+                                            <a href="https://lotericas.io/api/v1/jogos/megasena/lasted" target="_new">https://lotericas.io/api/v1/jogos/megasena/lasted</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style={{marginTop: "35px", textAlign: "center"}}>
                         <h1 style={{color: "#2a479f"}} id="resultado-endpoint">Resultado endpoint</h1>
                         <div style={{fontSize: "20px"}}>
                             <span>
-                                Nosso endpoint para resultas possui dois parametro que é o nome do jogo e o número da rodada:
+                                Nosso endpoint para resultado possui dois parametro que é o nome do jogo e o número da rodada:
                             </span>
                             <div className="row" style={{marginTop: "15px", textAlign: "left"}}>
                                 <div className="col-6">
