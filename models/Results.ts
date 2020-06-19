@@ -1,8 +1,8 @@
-import { Schema, model, Document } from 'mongoose';
+import mongoose, { Schema, model, Document } from 'mongoose';
 
 const ResultsSchema = new Schema({}, {
     timestamps: true,
     strict: false
 });
 
-export default model('Results', ResultsSchema);
+export default mongoose.models.Results || model('Results', ResultsSchema);

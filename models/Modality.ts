@@ -1,4 +1,4 @@
-import { Schema, model, Document } from 'mongoose';
+import mongoose, { Schema, model, Document } from 'mongoose';
 
 export interface ModalityInterface extends Document{
     name: String,
@@ -16,4 +16,6 @@ const ModalitySchema = new Schema({
     }
 });
 
-export default model<ModalityInterface>('Modality', ModalitySchema);
+mongoose.mo
+
+export default mongoose.models.Modality || model<ModalityInterface>('Modality', ModalitySchema);

@@ -1,14 +1,42 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import dbConnect from "../../../../../utils/dbConnect";
 import Results from "../../../../../models/Results";
+import Requests from "../../../../../models/Requests";
+import Cors from 'cors';
+
+const cors = Cors({
+    methods: ['GET', 'HEAD'],
+    origin: "*"
+});
 
 dbConnect();
 
+function runMiddleware(req, res, fn) {
+    return new Promise((resolve, reject) => {
+      fn(req, res, (result) => {
+        if (result instanceof Error) {
+          return reject(result)
+        }
+  
+        return resolve(result)
+      })
+    })
+}
+
 export default async function getGamesByName(req: NextApiRequest, res: NextApiResponse){
+    await runMiddleware(req, res, cors);
+
     res.setHeader('Cache-Control', 'public, max-age=120, stale-while-revalidate=60');
     
     const { query : { name }, method } = req;
-    
+    var _reqData = {
+        ip: req.headers['x-real-ip'] || req.connection.remoteAddress,
+        method: method,
+        date: new Date(),
+        url: req.url
+    };
+
+    await Requests.create(_reqData);
     switch(method){
         case "GET":
             try{
