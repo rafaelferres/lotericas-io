@@ -11,6 +11,7 @@ class DocsPage extends React.Component {
             <div>
                 <Head>
                     <title>Lotericas.io - Documentação</title>
+                    <link rel="icon" href="/brasil.svg"></link>
                 </Head>
                 <Header></Header>
                 <div className="w-full max-w-screen-xl relative mx-auto lg:w-auto p-6 pb-0">

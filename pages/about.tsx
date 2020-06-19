@@ -6,12 +6,13 @@ import Footer from '../components/Footer';
 
 class AboutPage extends React.Component {
 
-    
+
     render(){
         return (
             <div>
                 <Head>
                     <title>Lotericas.io - Sobre</title>
+                    <link rel="icon" href="/brasil.svg"></link>
                 </Head>
                 <Header></Header>
                 <div className="w-full max-w-screen-xl relative mx-auto lg:w-auto p-6 pb-0">

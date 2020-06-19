@@ -47,6 +47,7 @@ class IndexPage extends React.Component<any, any> {
             <div>
                 <Head>
                     <title>Lotericas.io - API Gratuita das loterias caixa</title>
+                    <link rel="icon" href="/brasil.svg"></link>
                 </Head>
                 <Header></Header>
                 <div className="w-full bg-blue-500">
