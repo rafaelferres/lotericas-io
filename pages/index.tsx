@@ -4,10 +4,10 @@ import "../styles/lotericas.io.css";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-class IndexPage extends React.Component<any> {
+class IndexPage extends React.Component<any, any> {
     constructor(props){
         super(props);
-        
+
         this.state = {
             resultRequest : {"success":true,"data":[{"name":"megasena"},{"name":"lotofacil"},{"name":"quina"},{"name":"lotomania"},{"name":"timemania"},{"name":"duplasena"},{"name":"federal"},{"name":"loteca"},{"name":"diadesorte"}]},
             canSend: true
