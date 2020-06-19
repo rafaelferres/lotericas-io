@@ -5,8 +5,9 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 class IndexPage extends React.Component<any> {
-    constructor(){
-        super({});
+    constructor(props){
+        super(props);
+        
         this.state = {
             resultRequest : {"success":true,"data":[{"name":"megasena"},{"name":"lotofacil"},{"name":"quina"},{"name":"lotomania"},{"name":"timemania"},{"name":"duplasena"},{"name":"federal"},{"name":"loteca"},{"name":"diadesorte"}]},
             canSend: true
@@ -39,7 +40,6 @@ class IndexPage extends React.Component<any> {
                 })
             }
         }
-        //this.setState()
     }
 
     render(){
