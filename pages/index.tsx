@@ -15,7 +15,7 @@ class IndexPage extends React.Component<any, any> {
     }
 
     static async getInitialProps({ req }){
-        const res = await fetch('http://localhost:3000/api/v1/requests');
+        const res = await fetch('https://lotericas.io/api/v1/requests');
         const { data } = await res.json();
         return { requests : data };
     }
@@ -27,7 +27,7 @@ class IndexPage extends React.Component<any, any> {
         });
         if(event.target.url.value){
             try{
-                const res = await fetch(`http://localhost:3000/api/v1/${event.target.url.value}`);
+                const res = await fetch(`http://lotericas.io/api/v1/${event.target.url.value}`);
                 const data = await res.json();
                 this.setState({
                     resultRequest: data,
