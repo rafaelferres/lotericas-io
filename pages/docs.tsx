@@ -10,7 +10,7 @@ class DocsPage extends React.Component {
         return (
             <div>
                 <Head>
-                    <title>Lotericas.io - Documentação</title>
+                    <title>Lotericas.IO - Documentação</title>
                     <link rel="icon" href="/brasil.svg"></link>
                 </Head>
                 <Header></Header>

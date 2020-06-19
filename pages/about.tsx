@@ -11,7 +11,7 @@ class AboutPage extends React.Component {
         return (
             <div>
                 <Head>
-                    <title>Lotericas.io - Sobre</title>
+                    <title>Lotericas.IO - Sobre</title>
                     <link rel="icon" href="/brasil.svg"></link>
                 </Head>
                 <Header></Header>

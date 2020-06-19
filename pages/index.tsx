@@ -46,7 +46,7 @@ class IndexPage extends React.Component<any, any> {
         return (
             <div>
                 <Head>
-                    <title>Lotericas.io - API Gratuita das loterias caixa</title>
+                    <title>Lotericas.IO - API Gratuita das loterias caixa</title>
                     <link rel="icon" href="/brasil.svg"></link>
                 </Head>
                 <Header></Header>
