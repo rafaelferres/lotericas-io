@@ -27,7 +27,7 @@ class IndexPage extends React.Component<any, any> {
         });
         if(event.target.url.value){
             try{
-                const res = await fetch(`http://lotericas.io/api/v1/${event.target.url.value}`);
+                const res = await fetch(`https://lotericas.io/api/v1/${event.target.url.value}`);
                 const data = await res.json();
                 this.setState({
                     resultRequest: data,
