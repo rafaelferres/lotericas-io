@@ -4,7 +4,7 @@ import "../styles/lotericas.io.css";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-class IndexPage extends React.Component {
+class IndexPage extends React.Component<any> {
     constructor(){
         super({});
         this.state = {
