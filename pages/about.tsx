@@ -5,9 +5,8 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 class AboutPage extends React.Component {
-    constructor(){
-        super();
-    }
+
+    
     render(){
         return (
             <div>

@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 
 class IndexPage extends React.Component {
     constructor(){
-        super();
+        super({});
         this.state = {
             resultRequest : {"success":true,"data":[{"name":"megasena"},{"name":"lotofacil"},{"name":"quina"},{"name":"lotomania"},{"name":"timemania"},{"name":"duplasena"},{"name":"federal"},{"name":"loteca"},{"name":"diadesorte"}]},
             canSend: true
