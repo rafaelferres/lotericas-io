@@ -110,7 +110,7 @@ class DocsPage extends React.Component {
                                 <h2 className="text-xl font-semibold w-full">Exemplo</h2>
                                 <div className="mt-3">
                                     <span className="break-all">
-                                        <a href="https://lotericas.io/api/v1/jogos/:nome/:rodada" target="_new" className="text-blue-600 font-semibold underline">https://lotericas.io/api/v1/jogos/megasena/2000</a>
+                                        <a href="https://lotericas.io/api/v1/jogos/megasena/2000" target="_new" className="text-blue-600 font-semibold underline">https://lotericas.io/api/v1/jogos/megasena/2000</a>
                                     </span>
                                 </div>
                             </div>
