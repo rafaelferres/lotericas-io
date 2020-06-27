@@ -49,7 +49,7 @@ export default async function getGameByConcurso(req: NextApiRequest, res: NextAp
                     updatedAt: false
                 };
                 if(concurso == "lasted"){
-                    const games = await Results.find({name: name}).sort({_id:-1}).limit(1);
+                    const games = await Results.find({name: name}, usersProjection).sort({_id:-1}).limit(1);
                     res.status(200).json({ success: true, data: games});
                 }else{
                     const games = await Results.findOne({ name: name, concurso: concurso }, usersProjection);
